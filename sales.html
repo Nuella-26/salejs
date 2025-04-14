@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/sale.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="section_inner">
+      <div class="section_title">
+        <h1>Coffee Beans Sales</h1>
+      </div>
+    </section>
+
+    <section class="section_inner menu_section">
+      <div class="center">
+        <h1 class="menu_title">Lineup</h1>
+      </div>
+      <ul class="menu_list coffee_menu">
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">Original Blend 200g</h2>
+            <p class="caffee_menu_price">500 Yen</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">Original Blend 500g</h2>
+            <p class="caffee_menu_price">900 Yen</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">Special Blend 200g</h2>
+            <p class="caffee_menu_price">700 Yen</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">Special Blend 500g</h2>
+            <p class="caffee_menu_price">1200 Yen</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+      </ul>
+      <h2>Shipping Information</h2>
+      <ul>
+        <li>If the total amount is less than 2000 Yen, Shipping fee is 500 Yen</li>
+        <li>250 Yen for orders over 2000 Yen</li>
+        <li>Free for orders over 3000 Yen</li>
+      </ul>
+    </section>
+
+    <section class="section_inner">
+      <h2>Order</h2>
+      <form>
+        <p>Please select a product</p>
+        <div>
+          <select id="product" required>
+            <option hidden value="0">Please select</option>
+            <option value="500">Original Blend 200g 500 Yen</option>
+            <option value="900">Original Blend 500g 900 Yen</option>
+            <option value="700">Special Blend 200g 700 Yen</option>
+            <option value="1200">Special Blend 500g 1200 Yen</option>
+          </select>
+          <p>Please select quantity</p>
+          <input type="number" min="1" max="5" id="number" required>
+        </div>
+          <br>
+          <input type="button" class="btn" value="addition" onclick="add()" >
+          <input type="button" class="btn" value="total amount" onclick="calc()">
+      </form>
+    </section>
+    <script type="text/javascript" src="javascript/sale.js"></script>
+  </body>
+</html>
